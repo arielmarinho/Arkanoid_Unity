@@ -30,7 +30,6 @@ public class Bola : MonoBehaviour {
 		}
 		// Hit the Racket?
 		if (c.gameObject.tag == "raquete") {
-			print ("entrou");
 
 			float x=hitFactor(transform.position,
 				c.transform.position,
@@ -47,6 +46,7 @@ public class Bola : MonoBehaviour {
 	}
 	void OnBecameInvisible(){
 		SceneManager.LoadScene ("Start");
+		LoadScene.ingame = false;
 	}
 
 }
